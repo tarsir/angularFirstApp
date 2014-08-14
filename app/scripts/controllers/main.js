@@ -12,15 +12,15 @@ angular.module('angularWhyApp')
 
     var todosInStorage = localStorageService.get('todos');
 
-    $scope.todos = todosInStorage && todosInStorage.split('\n') || [];
+    $scope.todos = todosInStorage && todosInStorage.split('\n') || ['hello', 'my waifu'];
 
-    $scope.watch('todos', function () {
+    $scope.$watch('todos', function () {
         localStorageService.add('todos', $scope.todos.join('\n'));
     }, true);
 
     $scope.addTodo = function () {
-        $scope.todos.push($scope.item);
-        $scope.item = '';
+        $scope.todos.push($scope.todo);
+        $scope.todo = '';
     };
     $scope.removeTodo = function(index) {
         $scope.todos.splice(index, 1);

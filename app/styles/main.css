@@ -14,6 +14,8 @@ body {
 
 /* Custom page header */
 .header {
+    position: absolute;
+    top: 20px;
   border-bottom: 1px solid #e5e5e5;
 }
 /* Make the masthead heading the same height as the navigation */
@@ -76,4 +78,168 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+
+/* Animations */
+
+.gallery-fade.ng-enter,
+.gallery-fade.ng-leave,
+.gallery-fade.ng-move {
+    -webkit-transition: 2s linear all;
+    -moz-transition: 2s linear all;
+    -o-transition: 2s linear all;
+    transition: 2s linear all;
+    position: relative;
+}
+
+.gallery-fade.ng-enter,
+.gallery-fade.ng-move,
+.gallery-fade.ng-hide-add-active {
+    opacity: 0;
+    overflow: hidden;
+}
+
+.gallery-fade.ng-move.ng-move-active,
+.gallery-fade.ng-enter.ng-enter-active,
+.gallery-fade.ng-hide-add {
+    opacity: 1;
+}
+
+.gallery-fade.ng-leave,
+.gallery-fade.ng-hide-remove-active {
+    opacity: 1;
+    overflow: hidden;
+}
+
+.gallery-fade.ng-leave.ng-leave-active,
+.gallery-fade.ng-hide-remove {
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+.gallery-container {
+    position: relative;
+    height: 640px;
+    width: 640px;
+}
+
+.image-repeat {
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: auto;
+    max-height: 620px;
+}
+
+.gallery-fade.ng-enter {
+    -webkit-animation: 2s fade-in;
+    animation: 2s fade-in;
+}
+.gallery-fade.ng-leave {
+    -webkit-animation: 2s fade-out;
+    animation: 2s fade-out;
+}
+
+.test-animation.ng-enter {
+    -webkit-animation: 2s fade-in;
+    animation: 2s fade-in;
+}
+
+.test-animation.ng-leave {
+    -webkit-animation: 2s fade-out;
+    animation: 2s fade-out;
+}
+
+@keyframes red-to-blue {
+    from { background: red; }
+    to { background: blue; }
+}
+
+@-webkit-keyframes red-to-blue {
+    from { background: red; }
+    to { background: blue; }
+}
+
+@keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@-webkit-keyframes fade-out {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@-webkit-keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Arrows */
+
+.arrow {
+    position: absolute;
+    display: block;
+    z-index: 100;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    outline: 1px;
+    cursor: pointer;
+}
+
+.arrow.prev {
+    opacity: 0.5;
+    left: 20px;
+    background-image: url(../assets/icons/prev_arrow.png);
+    transition: .8s linear all;
+}
+
+.arrow.next {
+    opacity: 0.5;
+    right: 20px;
+    background-image: url(../assets/icons/next_arrow.png);
+    transition: .8s linear all;
+}
+
+.arrow.prev:hover {
+    opacity: 1;
+}
+
+.arrow.next:hover {
+    opacity: 1;
+}
+
+/* Menu styling */
+
+.vertical_menu {
+    position: absolute;
+    font-family: Inconsolata;
+    padding: 5px;
+    top: 459px;
+    margin: 5px;
+    float: left;
+    width: 90px;
+}
+
+.vertical_menu ul {
+    list-style: none;
+    margin: 5px;
+}
+
+.vertical_menu li a {
+    opacity: 0.8;
+    color: gray;
+    transition: 0.8s linear all;
+}
+
+.vertical_menu li a:hover {
+    opacity: 1;
+    color: black;
 }
