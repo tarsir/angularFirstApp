@@ -16,7 +16,8 @@ body {
 .header {
     position: absolute;
     top: 20px;
-  border-bottom: 1px solid #e5e5e5;
+    margin-left: 20px;
+    border-bottom: 1px solid #e5e5e5;
 }
 /* Make the masthead heading the same height as the navigation */
 .header h3 {
@@ -81,6 +82,12 @@ body {
 }
 
 
+/* Header */
+
+main-header {
+}
+    
+
 /* Animations */
 
 .gallery-fade.ng-enter,
@@ -128,8 +135,6 @@ body {
 
 .image-repeat {
     position: absolute;
-    top: 0;
-    left: 0px;
     width: auto;
     max-height: 620px;
 }
@@ -218,28 +223,32 @@ body {
 
 /* Menu styling */
 
-.vertical_menu {
+.verticalmenu {
     position: absolute;
     font-family: Inconsolata;
+    font-size: 24px;
     padding: 5px;
-    top: 459px;
-    margin: 5px;
-    float: left;
+    top: 35%;
+    bottom: 50%;
+    left: 20px;
+    right: 0px;
     width: 90px;
 }
 
-.vertical_menu ul {
+.verticalmenu ul {
     list-style: none;
     margin: 5px;
 }
 
-.vertical_menu li a {
+.verticalmenu li a {
+    margin: 0 0 30px 0;
     opacity: 0.8;
     color: gray;
-    transition: 0.8s linear all;
+    transition: 0.5s linear all;
 }
 
-.vertical_menu li a:hover {
+.verticalmenu li a:hover {
     opacity: 1;
+    text-decoration: none;
     color: black;
 }

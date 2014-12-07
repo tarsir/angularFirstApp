@@ -22,7 +22,7 @@
 
 
     <!-- Add your site or application content here -->
-    <div class="vertical-menu">
+    <div class="verticalmenu">
         <ul>
           <li class="active"><a ng-href="#">Home</a></li>
           <li><a ng-href="#/about">About</a></li>
@@ -31,12 +31,13 @@
         </ul>
     </div>
 
+      <div class="header">
+          <h3 class="text-muted main-header" style="margin-left: 20px;">This site is Terrible!</h3>
+      </div>
+ 
     <div class="container">
    
-      <div class="header">
-          <h3 class="text-muted">This site is Terrible!</h3>
-      </div>
-      <div ng-view=""></div>
+     <div ng-view=""></div>
 
       <div class="footer">
         <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
