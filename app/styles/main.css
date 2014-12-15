@@ -16,7 +16,7 @@ body {
 .header {
     position: absolute;
     top: 20px;
-    margin-left: 20px;
+    margin-left: 55px;
     border-bottom: 1px solid #e5e5e5;
 }
 /* Make the masthead heading the same height as the navigation */
@@ -24,7 +24,7 @@ body {
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
-  padding-bottom: 19px;
+  padding-bottom: 15px;
 }
 
 /* Custom page footer */
@@ -189,7 +189,6 @@ main-header {
 /* Arrows */
 
 .arrow {
-    position: absolute;
     display: block;
     z-index: 100;
     top: 50%;
@@ -201,14 +200,14 @@ main-header {
 
 .arrow.prev {
     opacity: 0.5;
-    left: 20px;
+    left: -20px;
     background-image: url(../assets/icons/prev_arrow.png);
     transition: .8s linear all;
 }
 
 .arrow.next {
     opacity: 0.5;
-    right: 20px;
+    right: -20px;
     background-image: url(../assets/icons/next_arrow.png);
     transition: .8s linear all;
 }
@@ -226,13 +225,14 @@ main-header {
 .verticalmenu {
     position: absolute;
     font-family: Inconsolata;
-    font-size: 24px;
+    font-size: 32px;
     padding: 5px;
     top: 35%;
     bottom: 50%;
-    left: 20px;
+    left: 0px;
     right: 0px;
-    width: 90px;
+    width: 0px;
+    border-left: solid #e5e5e5;
 }
 
 .verticalmenu ul {

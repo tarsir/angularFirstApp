@@ -1,0 +1,30 @@
+<!--
+<form ng-submit="next()">
+    <input type="SUBMIT" value="Next Image" />
+</form>
+<form ng-submit="prev()">
+    <input type="SUBMIT" value="Previous Image" />
+</form>
+
+<div ng-init="on=true">
+    <button ng-click="on=!on">Toggle On/Off</button>
+    <div class="test-animation" ng-if="on">
+        This is sort of here.
+    </div>
+</div>
+-->
+
+
+<div class="row">
+    <div class="col-md-1">
+        <a class="arrow prev" style="right: $(this).width();" ng-click="prev()"></a>
+    </div>
+    <div class="col-md-8 gallery-container">
+        <div data-ng-repeat="img in allImgs | filter:{visible:'true'}" class="image-repeat test-animation img-responsive">
+            <img ng-src="images/{{img.title}}.jpg"/>
+        </div>
+    </div>
+    <div class="col-md-1">
+        <a class="arrow next" ng-click="next()"></a>
+    </div>
+</div>
